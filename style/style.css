@@ -128,7 +128,7 @@ nav a{
   padding-top: 20px;
 }
 
-@media (max-width:700px){
+@media screen and (max-width:700px){
   header{
     flex-direction: column;
 
@@ -136,13 +136,29 @@ nav a{
   nav{
     padding: 10px 0px;
   }
+  #home{
+    height: 200px;
+}
+.contenedor{
+  max-width: 420px;
+}
+.card-banner{
+  padding: 0px 55px;
+}
+
+#footer {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 }
 
 @media screen and (max-width:1000px){
   #home{
     height: 300px;
 }
-.container{
+.contenedor{
   max-width: 720px;
 }
 .card-banner{
@@ -150,7 +166,7 @@ nav a{
 }
 }
 
-@media screen and (max-width:600px){
+/* @media screen and (max-width:600px){
   #home{
     height: 200px;
 }
@@ -160,4 +176,4 @@ nav a{
 .card-banner{
   padding: 0px 55px;
 }
-}
+} */
