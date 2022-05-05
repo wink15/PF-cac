@@ -27,7 +27,11 @@ header {
 
 }
 #logo img{
-  height: 60px;
+   height: 80px; 
+   border-radius: 50%;
+   border-color: grey;
+   border-style: solid;
+   border: 5px solid  #2a6c9d;
 }
 /* nav {
   display: flex;
@@ -102,6 +106,7 @@ nav a{
   border-color: grey;
   border-style: solid;
   border: 5px solid #fff;
+  
 }
 #servicios img:hover {
   border: 5px solid #2a6c9d;
@@ -127,7 +132,7 @@ nav a{
   position: relative;
   margin: auto;
 }
-.circulos p{
+.grid p{
   text-align: center;
 }
 
