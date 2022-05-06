@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./style/btn.css">
   </head>
   <body>
     <header>
@@ -83,15 +84,18 @@
                 <h2>Contacto</h2>
                 <form action="">
                     <div class="div-field">
-                        <input class="" type="text" name="nombre" id="nombre" placeholder="Ingrese Nombre...">
+                        <input class="" type="text" name="nombre" id="nombre" placeholder="Ingrese Nombre... " required>
                     </div>
                     <div class="div-field">
-                        <input class="" type="email" name="email" id="email" placeholder="Ingrese Email...">
+                        <input class="" type="email" name="email" id="email" placeholder="Ingrese Email..." required>
                     </div>
                     <div class="div-field">
-                        <textarea class="" name="consulta" id="mensaje" cols="30" rows="10" placeholder="Dejanos tu consulta"></textarea>
+                        <textarea class="" name="consulta" id="mensaje" cols="30" rows="10" placeholder="Dejanos tu consulta" required></textarea>
                     </div>
-                    <input type="submit" value="Enviar" class="btn-cac">
+                    <di class="wrap">
+                      <button id="submit" class="button">Submit</button>
+                    </di>
+                   
                 </form>
             </div>
             <div class="frame">
