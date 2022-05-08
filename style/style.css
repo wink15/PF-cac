@@ -210,13 +210,21 @@ input, textarea{
 
 #footer{
   background-color: black;
-  height: 100px;
+  padding-bottom: 0.1px;
+  /* height: 100px;
   width: 100%;
-  flex: 1;
+  flex: 1; */
   /* position: fixed;
   bottom: 0px; */
 }
-
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
 .cont{
   display: flex;
   flex-direction: row;
@@ -225,12 +233,57 @@ input, textarea{
  padding-top: 10px;
   
 }
-.cont a{
-
- padding-right: 10px;
+.estudio{
+  width: 40%;
+  color: #fff;
+}
+.sub{
+  font-weight: 500;
+  font-size: 25px;
+}
+.sub + p{
+  font-weight: 500;
+}
+.redes{
+  width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-#footer h2{
+.icons{
+  display: inline-block;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+.icons i{
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.icons:hover{
+  background: #fff;
+    color:#2a6c9d;
+}
+.line{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  height: 2px;
+  background: #fff;
+  margin-bottom: 60px;
+}
+
+/* .cont a{
+
+ padding-right: 10px;
+} */
+
+/* #footer h2{
   font-size: 20px;
   text-align: center;
   padding-top: 20px;
@@ -241,7 +294,7 @@ input, textarea{
     padding: 0px 40px;
 }
 
-  
+   */
   
 
 @media (max-width: 480px) {
@@ -273,12 +326,29 @@ input, textarea{
 }
 
 
-#footer {
+/* #footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+} */
+.footer-content{
+  justify-content: center;
 }
 
+.redes{
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+.icons{
+  margin-left: 0;
+}
+
+.estudio{
+  text-align: center;
+  width: 80%;
+  margin-bottom: 40px;
+}
 }
 
 @media screen and (max-width:1000px){
