@@ -90,6 +90,7 @@ nav a{
 
 .flex {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -160,26 +161,38 @@ nav a{
   padding-bottom: 50px;
 
 }
-.formu{
+/* .formu{
   margin-left: 10px;
   padding-top: 20px;
-}
+  width: 50%;
+  padding: 0px 40px;
+  text-align: center;
+} */
 .formu h2{
-  padding-left: 15px;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 30px;
+  font-size: 50px;
 }
-form{
+/* form{
   width: 450px;
   padding: 10px 20px;
   box-sizing: border-box;
   margin-top: 20px;
   padding-right: 20px;
   
+} */
+.formu{
+  width: 50%;
+  padding: 0px 40px;
+  text-align: center;
 }
 .frame{
-  width: 50%;
+  /* width: 50%;
     padding: 0px 40px;
     margin-top: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box; */
+    width: 50%;
+    padding: 0px 40px;
     
 }
 
@@ -298,7 +311,7 @@ input, textarea{
 #home{
 
   min-height: 30vh;
-  background-position: 100000% 40%;
+  background-position: 100% 40%;
  
 }
 
@@ -324,10 +337,10 @@ input, textarea{
 }
 }
 
-@media screen and (max-width:1920px){
+@media screen and (max-width:1300px){
   #home{
-    height: 300px;
-    min-height: 50vh;
+    height: 400px;
+    min-height: 52vh;
     width:100%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -345,10 +358,12 @@ input, textarea{
 .formu{
   width: 100%;
   margin-bottom: 20px;
+ 
 }
 
 .frame{
   width: 100%;
+ 
 }
 
 
@@ -386,11 +401,6 @@ input, textarea{
 .contenedor .circulo{
   max-width: 45vw;
   max-height: 100vhpx;
-}
-#contacto .flex{
-  /* flex-direction: column  ;
-  align-items: center;
-  justify-content: center; */
 }
 .card-banner{
   padding: 0px 55px;
