@@ -14,7 +14,6 @@ header {
   justify-content: space-between;
   align-items: center;
   min-height: 70px;
- 
   color: #fff;
   background-color: #2a6c9d;
   position: sticky;
@@ -72,14 +71,13 @@ nav a{
 
 #home {
   /* background-image: url("../img/banner.jpg"); */
-  background-size: cover;
+ 
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-  /* height: 500px; */
-  width: 100%;
-  height: 100vh;
+  background-size: cover;
+  min-height: 100vh;
   background-image: linear-gradient(135deg, rgba(245, 247, 250, 0.5) 0%, rgba(195, 207, 226, 0.5) 100%),url("../img/banner.jpg");
-  /* box-shadow: inset 0 0 0 2000px rgb(84 84 84 / 51%); */
   display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -109,19 +107,9 @@ nav a{
     padding-left: 25px;
     padding-bottom: 30px;
    
-    /* padding: 0px 160px; */
-    /* display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end; */
+  
 }
- /* #servicios{
-   height: 400px;
-  margin-bottom: 20px;
-  padding-bottom: 30px;
-  margin-top: 30px;
 
- } */
 
 #servicios h1 {
   font-family: "Montserrat", Helvetica, sans-serif;
@@ -211,11 +199,7 @@ input, textarea{
 #footer{
   background-color: black;
   padding-bottom: 0.1px;
-  /* height: 100px;
-  width: 100%;
-  flex: 1; */
-  /* position: fixed;
-  bottom: 0px; */
+
 }
 .footer-content{
   display: flex;
@@ -278,24 +262,7 @@ input, textarea{
   margin-bottom: 60px;
 }
 
-/* .cont a{
 
- padding-right: 10px;
-} */
-
-/* #footer h2{
-  font-size: 20px;
-  text-align: center;
-  padding-top: 20px;
-  margin: 0;
-}
-.frame{
-  width: 50%;
-    padding: 0px 40px;
-}
-
-   */
-  
 
 @media (max-width: 480px) {
   form{
@@ -307,37 +274,43 @@ input, textarea{
 }
 
 
-@media screen and (max-width:700px){
+@media  (max-width:700px){
   header{
     flex-direction: column;
     align-items: center;
   }
+
   nav{
     padding: 10px 0px;
   }
-  #home{
-    height: 200px;
-}
+
 .contenedor{
-  max-width: 420px;
+  max-width: 600px;
 }
-.card-banner{
+#contacto .formu{
+ 
+
+}
+/* .card-banner{
   padding: 0px 55px;
+} */
+
+#home{
+
+  min-height: 30vh;
+  background-position: 100000% 40%;
+ 
 }
 
-
-/* #footer {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
 .footer-content{
   justify-content: center;
+  
 }
 
 .redes{
   width: 80%;
   justify-content: space-evenly;
+  
 }
 
 .icons{
@@ -351,14 +324,22 @@ input, textarea{
 }
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1920px){
   #home{
     height: 300px;
+    min-height: 50vh;
+    width:100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: 0px 100px;
+   
 }
 .contenedor{
   max-width: 720px;
 }
 .card-banner{
+
   padding: 0px 75px;
 }
 .formu{
@@ -372,13 +353,44 @@ input, textarea{
 
 
 }
+@media (max-width:880px){
+  #home{
+    min-height: 30vh;
+    background-position: 10% 20%;
+    height: 250px;
+  }
 
+}
+@media (max-width:700px){
+  #home{
+    min-height: 30vh;
+    background-position: 10% 30%;
+    height: 280px;
+  }
+
+}
 @media screen and (max-width:550px){
   #home{
-    height: 100px;
+    /* position: relative;
+   background-repeat:  no-repeat ;
+   background-position: center;
+    background-size: cover; */
+    /* height: 500px; */
+    background-position: 10% 30%;
+    min-height: 20vh;
+    height: 200px;
+    /* overflow: hidden; */
+ 
+
 }
-.container{
-  max-width: 100px;
+.contenedor .circulo{
+  max-width: 45vw;
+  max-height: 100vhpx;
+}
+#contacto .flex{
+  /* flex-direction: column  ;
+  align-items: center;
+  justify-content: center; */
 }
 .card-banner{
   padding: 0px 55px;
@@ -389,8 +401,12 @@ input, textarea{
   grid-template-columns: repeat(1,1fr);
   
 }
-.circulos{
-  padding-top: 10px;
+.circulo{
+  padding-top: 20px;
+}
+#servicios h1 {
+  padding-top: 0px;
+  margin-top: 1px;
 }
 
 }
