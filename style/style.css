@@ -265,6 +265,35 @@ input, textarea{
 .icons:hover{
   background: #fff;
     color:#2a6c9d;
+    animation: saltar 1s ease-out 1 normal both ;
+}
+@keyframes saltar {
+  from{
+    transform: translateY(0 ) scale(1,1);
+  } 15%{
+    transform: translateY(-1rem) scale(1,1.2);
+  }
+  35%{
+    transform: translateY(-2.8rem) scale(1,1.08);
+  }
+  45%{
+    transform: translateY(-2.8rem) scale(1,1.2);
+  }
+  65%{
+    transform: translateY(0) scale(1,1);
+  }
+  75%{
+    transform: translateY(.5rem) scale(1.2,.8);
+  }
+  85%{
+    transform: translateY(0) scale(1,1);
+  }
+  95%{
+    transform: translateY(0) scale(1.05,1.05);
+  }
+  to{
+    transform: translateY(0) scale(1,1);
+  }
 }
 .line{
   width: 90%;
