@@ -5,6 +5,8 @@ const con= document.getElementById('consulta');
 
 let err = document.getElementsByClassName("alert");
 
+const regexText =/^[a-zA-Z\u00E0-\u00FC ]+$/;
+
 const validarRequired = function() {
 
  
@@ -27,7 +29,7 @@ const validarRequired = function() {
         return false;
     }
 
-    if (!/^[a-zA-Z]*$/g.test(nombre.value)) {
+    if (regexText.test(nombre.value)) {}else{
         swal("Error!", "Nombre invalido", "error");
 
         return false;
@@ -46,3 +48,4 @@ function validar_email( email )
     var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email) ? true : false;
 }
+
