@@ -14,7 +14,6 @@ header {
   justify-content: space-between;
   align-items: center;
   min-height: 70px;
- 
   color: #fff;
   background-color: #2a6c9d;
   position: sticky;
@@ -72,14 +71,13 @@ nav a{
 
 #home {
   /* background-image: url("../img/banner.jpg"); */
-  background-size: cover;
+ 
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-  /* height: 500px; */
-  width: 100%;
-  height: 100vh;
+  background-size: cover;
+  min-height: 100vh;
   background-image: linear-gradient(135deg, rgba(245, 247, 250, 0.5) 0%, rgba(195, 207, 226, 0.5) 100%),url("../img/banner.jpg");
-  /* box-shadow: inset 0 0 0 2000px rgb(84 84 84 / 51%); */
   display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -92,6 +90,7 @@ nav a{
 
 .flex {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -109,19 +108,9 @@ nav a{
     padding-left: 25px;
     padding-bottom: 30px;
    
-    /* padding: 0px 160px; */
-    /* display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end; */
+  
 }
- /* #servicios{
-   height: 400px;
-  margin-bottom: 20px;
-  padding-bottom: 30px;
-  margin-top: 30px;
 
- } */
 
 #servicios h1 {
   font-family: "Montserrat", Helvetica, sans-serif;
@@ -172,26 +161,38 @@ nav a{
   padding-bottom: 50px;
 
 }
-.formu{
+/* .formu{
   margin-left: 10px;
   padding-top: 20px;
-}
+  width: 50%;
+  padding: 0px 40px;
+  text-align: center;
+} */
 .formu h2{
-  padding-left: 15px;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 30px;
+  font-size: 50px;
 }
-form{
+/* form{
   width: 450px;
   padding: 10px 20px;
   box-sizing: border-box;
   margin-top: 20px;
   padding-right: 20px;
   
+} */
+.formu{
+  width: 50%;
+  padding: 0px 40px;
+  text-align: center;
 }
 .frame{
-  width: 50%;
+  /* width: 50%;
     padding: 0px 40px;
     margin-top: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box; */
+    width: 50%;
+    padding: 0px 40px;
     
 }
 
@@ -210,13 +211,17 @@ input, textarea{
 
 #footer{
   background-color: black;
-  height: 100px;
-  width: 100%;
-  flex: 1;
-  /* position: fixed;
-  bottom: 0px; */
+  padding-bottom: 0.1px;
+  padding:30px 0px;
 }
-
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
 .cont{
   display: flex;
   flex-direction: row;
@@ -225,24 +230,81 @@ input, textarea{
  padding-top: 10px;
   
 }
-.cont a{
-
- padding-right: 10px;
+.estudio{
+  width: 40%;
+  color: #fff;
 }
-
-#footer h2{
-  font-size: 20px;
-  text-align: center;
-  padding-top: 20px;
-  margin: 0;
+.sub{
+  font-weight: 500;
+  font-size: 25px;
 }
-.frame{
+.sub + p{
+  font-weight: 500;
+}
+.redes{
   width: 50%;
-    padding: 0px 40px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-  
-  
+.icons{
+  display: inline-block;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+.icons i{
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.icons:hover{
+  background: #fff;
+    color:#2a6c9d;
+    animation: saltar 1s ease-out 1 normal both ;
+}
+@keyframes saltar {
+  from{
+    transform: translateY(0 ) scale(1,1);
+  } 15%{
+    transform: translateY(-1rem) scale(1,1.2);
+  }
+  35%{
+    transform: translateY(-2.8rem) scale(1,1.08);
+  }
+  45%{
+    transform: translateY(-2.8rem) scale(1,1.2);
+  }
+  65%{
+    transform: translateY(0) scale(1,1);
+  }
+  75%{
+    transform: translateY(.5rem) scale(1.2,.8);
+  }
+  85%{
+    transform: translateY(0) scale(1,1);
+  }
+  95%{
+    transform: translateY(0) scale(1.05,1.05);
+  }
+  to{
+    transform: translateY(0) scale(1,1);
+  }
+}
+.line{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  height: 2px;
+  background: #fff;
+  margin-bottom: 60px;
+}
+
+
 
 @media (max-width: 480px) {
   form{
@@ -254,61 +316,120 @@ input, textarea{
 }
 
 
-@media screen and (max-width:700px){
+@media  (max-width:700px){
   header{
     flex-direction: column;
     align-items: center;
   }
+
   nav{
     padding: 10px 0px;
   }
-  #home{
-    height: 200px;
-}
+
 .contenedor{
-  max-width: 420px;
+  max-width: 600px;
 }
-.card-banner{
+#contacto .formu{
+ 
+
+}
+/* .card-banner{
   padding: 0px 55px;
+} */
+
+#home{
+
+  min-height: 30vh;
+  background-position: 100% 40%;
+ 
 }
 
-
-#footer {
-  flex-direction: column;
-  align-items: center;
+.footer-content{
   justify-content: center;
+  
 }
 
+.redes{
+  width: 80%;
+  justify-content: space-evenly;
+  
 }
 
-@media screen and (max-width:1000px){
+.icons{
+  margin-left: 0;
+}
+
+.estudio{
+  text-align: center;
+  width: 80%;
+  margin-bottom: 40px;
+}
+}
+
+@media screen and (max-width:1300px){
   #home{
-    height: 300px;
+    height: 400px;
+    min-height: 52vh;
+    width:100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: 0px 100px;
+   
 }
 .contenedor{
   max-width: 720px;
 }
 .card-banner{
+
   padding: 0px 75px;
 }
 .formu{
-  width: 100%;
+  /* width: 100%; */
   margin-bottom: 20px;
+ 
 }
 
 .frame{
   width: 100%;
+ 
 }
 
 
 }
+@media (max-width:880px){
+  #home{
+    min-height: 30vh;
+    background-position: 10% 20%;
+    height: 250px;
+  }
 
+}
+@media (max-width:700px){
+  #home{
+    min-height: 30vh;
+    background-position: 10% 30%;
+    height: 280px;
+  }
+
+}
 @media screen and (max-width:550px){
   #home{
-    height: 100px;
+    /* position: relative;
+   background-repeat:  no-repeat ;
+   background-position: center;
+    background-size: cover; */
+    /* height: 500px; */
+    background-position: 10% 30%;
+    min-height: 20vh;
+    height: 200px;
+    /* overflow: hidden; */
+ 
+
 }
-.container{
-  max-width: 100px;
+.contenedor .circulo{
+  max-width: 45vw;
+  max-height: 100vhpx;
 }
 .card-banner{
   padding: 0px 55px;
@@ -319,8 +440,12 @@ input, textarea{
   grid-template-columns: repeat(1,1fr);
   
 }
-.circulos{
-  padding-top: 10px;
+.circulo{
+  padding-top: 20px;
+}
+#servicios h1 {
+  padding-top: 0px;
+  margin-top: 1px;
 }
 
 }
